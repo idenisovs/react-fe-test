@@ -4,6 +4,6 @@ import './LearnPage.css';
 
 export function LearnPage() {
 	return (
-		<div>Hello</div>
+		<div>Learn Page</div>
 	);
 }
