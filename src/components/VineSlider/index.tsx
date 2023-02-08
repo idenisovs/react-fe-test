@@ -24,13 +24,20 @@ export function VineSlider(props: VineSliderProps) {
 	};
 
 	return (
-		<div className="VineSlider">
+		<section className="VineSlider">
 			<Slider ref={slider} {...sliderSettings}>
 				{vines.map((vine) => <VineCard key={vine.id} vine={vine} />)}
 			</Slider>
-			{/*<button type="button" onClick={slider.current?.slickNext}>*/}
-			{/*	Next*/}
-			{/*</button>*/}
-		</div>
+
+			<div className="VineSlider--Controls">
+				<button type="button" className="VineSlider--Controls__button">
+					<i className="material-symbols-outlined">arrow_back_ios_new</i>
+				</button>
+
+				<button type="button" className="VineSlider--Controls__button">
+					<i className="material-symbols-outlined">arrow_forward_ios</i>
+				</button>
+			</div>
+		</section>
 	);
 }

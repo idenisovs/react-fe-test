@@ -1,3 +1,36 @@
 .VineSlider {
     margin-top: 40px;
 }
+
+.VineSlider--Controls {
+    text-align: right;
+    margin-top: 84px;
+}
+
+.VineSlider--Controls__button {
+    border: 1px solid black;
+
+    border-radius: 100%;
+
+    height: 50px;
+    width: 50px;
+
+    padding: 0;
+    margin-right: 19px;
+
+    text-align: center;
+
+    background-color: transparent;
+}
+
+.VineSlider--Controls__button:hover {
+    border-color: #690B0B;
+    color: #690B0B;
+    cursor: pointer;
+}
+
+.VineSlider--Controls__button:disabled {
+    border-color: #AEADAD;
+    color: #AEADAD;
+    cursor: none;
+}
