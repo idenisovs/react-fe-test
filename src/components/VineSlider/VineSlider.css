@@ -32,5 +32,5 @@
 .VineSlider--Controls__button:disabled {
     border-color: #AEADAD;
     color: #AEADAD;
-    cursor: none;
+    cursor: default;
 }
