@@ -10,32 +10,30 @@ import './VineFilter.css';
 export function VineFilter(props: VineFilterProps) {
 	const { filter, changes } = props;
 
-	function handleFilterChanges(changesEvent: ChangeEventSimple<Boolean>) {
+	function handleFilterChanges(e: ChangeEventSimple<boolean>) {
 		if (!changes) {
 			return;
 		}
 
-		const filterUpdate = [...filter];
-		const idx = filter.indexOf(changesEvent.name as VineTypes);
+		const update = {...filter};
 
-		if (idx === -1) {
-			filterUpdate.push(changesEvent.name as VineTypes);
-		} else {
-			filterUpdate.splice(idx, 1);
-		}
+		const filterItem = e.name as VineTypes;
 
-		changes(filterUpdate);
+		update[filterItem] = e.value;
+
+		changes(update);
 	}
 
 	return (
 		<nav className="VineFilter">
-			<Checkbox label="dry" value={isSelected('dry', filter)} changes={handleFilterChanges} />
-			<Checkbox label="semi-dry" value={isSelected('semi-dry', filter)} changes={handleFilterChanges} />
-			<Checkbox label="sweet" value={isSelected('sweet', filter)} changes={handleFilterChanges} />
+			{Object.keys(filter).map((filterKey) => {
+				return <Checkbox
+					key={filterKey}
+					label={filterKey}
+					value={filter[filterKey as VineTypes]}
+					changes={handleFilterChanges}
+				/>;
+			})}
 		</nav>
 	);
-}
-
-function isSelected(type: VineTypes, filter: VineTypes[]) {
-	return filter.indexOf(type) > -1;
 }

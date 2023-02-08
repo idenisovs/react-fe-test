@@ -1,6 +1,6 @@
-import { VineTypes } from '../dtos';
+import { VineFilter } from '../dtos';
 
 export interface VineFilterProps {
-	filter: VineTypes[];
-	changes?: (filter: VineTypes[]) => void;
+	filter: VineFilter;
+	changes?: (filter: VineFilter) => void;
 }

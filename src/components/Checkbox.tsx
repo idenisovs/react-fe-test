@@ -14,7 +14,7 @@ export function Checkbox(props: CheckboxProps) {
 
 		changes({
 			name: label,
-			value: Boolean(e.target.value)
+			value: e.target.checked
 		});
 	}
 

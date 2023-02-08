@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 
 import { VineFilter } from '../components';
+import { VineFilter as Filter } from '../dtos';
 import { useVineList } from '../hooks';
-import { VineTypes } from '../dtos';
 
 import './MainPage.css';
 
 export function MainPage() {
-	const [vineFilter, setVineFilter] = useState<VineTypes[]>([]);
+	const [vineFilter, setVineFilter] = useState<Filter>({
+		dry: false,
+		'semi-dry': false,
+		sweet: false,
+	});
+
 	const vines = useVineList(vineFilter);
 
 	return (
