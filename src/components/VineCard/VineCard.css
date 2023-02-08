@@ -1,1 +1,45 @@
-.VineCard {}
+.VineCard {
+    width: 270px;
+}
+
+.VineCard--Label {
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: 600;
+
+    margin: 0 0 11px 0;
+}
+
+.VineCard--Type {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.VineCard--Picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    margin-top: 11px;
+
+    height: 236px;
+    width: 270px;
+}
+
+.VineCard--Actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-top: 17px;
+
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
