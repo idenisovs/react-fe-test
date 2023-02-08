@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { VineFilter } from '../components';
+import { VineFilter, VineSlider } from '../components';
 import { VineFilter as Filter } from '../dtos';
 import { useVineList } from '../hooks';
 
@@ -19,9 +19,7 @@ export function MainPage() {
 		<div>
 			<VineFilter filter={vineFilter} changes={setVineFilter} />
 
-			<pre>
-				{JSON.stringify(vines, null, 4)}
-			</pre>
+			<VineSlider vines={vines} />
 		</div>
 	);
 }
