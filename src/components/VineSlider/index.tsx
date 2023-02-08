@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { VineSliderProps } from './VineSliderProps';
+import { VineCard } from '../VineCard';
 
 import './VineSlider.css';
 
@@ -9,7 +10,7 @@ export function VineSlider(props: VineSliderProps) {
 
 	return (
 		<div className="VineSlider">
-			{JSON.stringify(vines)}
+			{vines.map((vine) => <VineCard key={vine.id} vine={vine} />)}
 		</div>
 	);
 }
