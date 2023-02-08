@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Checkbox } from './Checkbox';
+import { Checkbox } from '../Checkbox';
 import { VineFilterProps } from './VineFilterProps';
-import { ChangeEventSimple } from './ChangeEventSimple';
-import { VineTypes } from '../dtos';
+import { ChangeEventSimple } from '../ChangeEventSimple';
+import { VineTypes } from '../../dtos';
 
 import './VineFilter.css';
 

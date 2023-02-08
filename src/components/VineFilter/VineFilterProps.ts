@@ -1,4 +1,4 @@
-import { VineFilter } from '../dtos';
+import { VineFilter } from '../../dtos';
 
 export interface VineFilterProps {
 	filter: VineFilter;

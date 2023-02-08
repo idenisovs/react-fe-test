@@ -1,4 +1,4 @@
-import { ChangeEventSimple } from './ChangeEventSimple';
+import { ChangeEventSimple } from '../ChangeEventSimple';
 
 export interface CheckboxProps {
 	label: string;
