@@ -27,6 +27,7 @@ export function WineCard(props: WineCardProps) {
 				<Link to={`/learn/${wine.id}`} className="WineCard--Actions__Link">
 					Learn <i className="material-symbols-outlined">arrow_forward_ios</i>
 				</Link>
+
 				<Link to={`/shop/${wine.id}`} className="WineCard--Actions__Link">
 					Shop <i className="material-symbols-outlined">arrow_forward_ios</i>
 				</Link>

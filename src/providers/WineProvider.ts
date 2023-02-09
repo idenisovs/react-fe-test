@@ -14,4 +14,12 @@ export class WineProvider {
 
 		return wines;
 	}
+
+	static async getById(wineId: string): Promise<Wine|undefined> {
+		const response = await fetch('/list.json');
+
+		const wines = await response.json() as Wine[];
+
+		return wines.find((wine: Wine) => wine.id === wineId);
+	}
 }
