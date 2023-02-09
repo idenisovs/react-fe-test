@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { WineCardProps } from './WineCardProps';
 
 import './WineCard.css';
@@ -22,12 +24,12 @@ export function WineCard(props: WineCardProps) {
 			</main>
 
 			<footer className="WineCard--Actions">
-				<span>
-					Learn 〉
-				</span>
-				<span>
-					Shop 〉
-				</span>
+				<Link to={`/learn/${wine.id}`} className="WineCard--Actions__Link">
+					Learn <i className="material-symbols-outlined">arrow_forward_ios</i>
+				</Link>
+				<Link to={`/shop/${wine.id}`} className="WineCard--Actions__Link">
+					Shop <i className="material-symbols-outlined">arrow_forward_ios</i>
+				</Link>
 			</footer>
 		</section>
 	);
