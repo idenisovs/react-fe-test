@@ -9,11 +9,11 @@ export default createBrowserRouter([
 		element: <MainPage />
 	},
 	{
-		path: '/learn',
+		path: '/learn/:wineId',
 		element: <LearnPage />
 	},
 	{
-		path: '/shop',
+		path: '/shop/:wineId',
 		element: <ShopPage />
 	}
 ]);
