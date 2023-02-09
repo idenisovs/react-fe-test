@@ -19,8 +19,11 @@ export function Checkbox(props: CheckboxProps) {
 	}
 
 	return (
-		<>
-			<input type="checkbox" checked={value} onChange={handleChanges} /> {label}
-		</>
+		<div className="Checkbox">
+			<input id={label} type="checkbox" className="css-checkbox" checked={value} onChange={handleChanges} />
+			<label htmlFor={label}>
+				{label}
+			</label>
+		</div>
 	);
 }
