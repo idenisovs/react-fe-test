@@ -1,0 +1,12 @@
+.WinePage__Actions {
+    margin-top: 2em;
+}
+
+.WinePage__Link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: black;
+    text-decoration: none;
+}
