@@ -59,6 +59,10 @@
     text-decoration: none;
 }
 
+.WineCard--Actions__Link:hover {
+    color: #690B0B;
+}
+
 .WineCard--Actions__Link i {
     margin-left: 0.25em;
 }

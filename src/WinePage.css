@@ -8,5 +8,15 @@
     align-items: center;
 
     color: black;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+
+    text-transform: uppercase;
     text-decoration: none;
+}
+
+.WinePage__Link:hover {
+    color: #690B0B;
 }
