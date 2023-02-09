@@ -1,0 +1,1 @@
+export type WineTypes = 'dry'|'semi-dry'|'sweet';

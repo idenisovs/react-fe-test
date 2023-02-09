@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { VineSliderControlsProps } from './VineSliderControlsProps';
+import { WineSliderControlsProps } from './WineSliderControlsProps';
 
-export function VineSliderControls(props: VineSliderControlsProps) {
+export function WineSliderControls(props: WineSliderControlsProps) {
 	const { slider, visible, forwardDisabled, backDisabled } = props;
 
 	if (!props.slider) {
@@ -16,9 +16,9 @@ export function VineSliderControls(props: VineSliderControlsProps) {
 	}
 
 	return (
-		<div className="VineSlider--Controls">
+		<div className="WineSlider--Controls">
 			<button type="button"
-					className="VineSlider--Controls__button"
+					className="WineSlider--Controls__button"
 					onClick={slider?.slickPrev}
 					disabled={backDisabled}
 			>
@@ -26,7 +26,7 @@ export function VineSliderControls(props: VineSliderControlsProps) {
 			</button>
 
 			<button type="button"
-					className="VineSlider--Controls__button"
+					className="WineSlider--Controls__button"
 					onClick={slider?.slickNext}
 					disabled={forwardDisabled}
 			>

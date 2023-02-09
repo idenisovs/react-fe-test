@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
-import { VineFilter, VineSlider } from '../components';
-import { VineFilter as Filter } from '../dtos';
-import { useVineList } from '../hooks';
+import { WineFilter, WineSlider } from '../components';
+import { WineFilter as Filter } from '../dtos';
+import { useWineList } from '../hooks';
 
 import './MainPage.css';
 
 export function MainPage() {
-	const [vineFilter, setVineFilter] = useState<Filter>({
+	const [wineFilter, setWineFilter] = useState<Filter>({
 		dry: false,
 		'semi-dry': false,
 		sweet: false,
 	});
 
-	const vines = useVineList(vineFilter);
+	const wines = useWineList(wineFilter);
 
 	return (
 		<div>
-			<VineFilter filter={vineFilter} changes={setVineFilter} />
+			<WineFilter filter={wineFilter} changes={setWineFilter} />
 
-			<VineSlider vines={vines} />
+			<WineSlider wines={wines} />
 		</div>
 	);
 }

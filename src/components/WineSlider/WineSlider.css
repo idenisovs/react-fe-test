@@ -1,13 +1,13 @@
-.VineSlider {
+.WineSlider {
     margin-top: 40px;
 }
 
-.VineSlider--Controls {
+.WineSlider--Controls {
     text-align: right;
     margin-top: 84px;
 }
 
-.VineSlider--Controls__button {
+.WineSlider--Controls__button {
     border: 1px solid black;
 
     border-radius: 100%;
@@ -23,13 +23,13 @@
     background-color: transparent;
 }
 
-.VineSlider--Controls__button:hover {
+.WineSlider--Controls__button:hover {
     border-color: #690B0B;
     color: #690B0B;
     cursor: pointer;
 }
 
-.VineSlider--Controls__button:disabled {
+.WineSlider--Controls__button:disabled {
     border-color: #AEADAD;
     color: #AEADAD;
     cursor: default;

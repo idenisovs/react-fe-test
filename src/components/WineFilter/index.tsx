@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Checkbox } from '../Checkbox';
-import { VineFilterProps } from './VineFilterProps';
+import { WineFilterProps } from './WineFilterProps';
 import { ChangeEventSimple } from '../ChangeEventSimple';
-import { VineTypes } from '../../dtos';
+import { WineTypes } from '../../dtos';
 
-import './VineFilter.css';
+import './WineFilter.css';
 
-export function VineFilter(props: VineFilterProps) {
+export function WineFilter(props: WineFilterProps) {
 	const { filter, changes } = props;
 
 	function handleFilterChanges(e: ChangeEventSimple<boolean>) {
@@ -17,7 +17,7 @@ export function VineFilter(props: VineFilterProps) {
 
 		const update = {...filter};
 
-		const filterItem = e.name as VineTypes;
+		const filterItem = e.name as WineTypes;
 
 		update[filterItem] = e.value;
 
@@ -25,12 +25,12 @@ export function VineFilter(props: VineFilterProps) {
 	}
 
 	return (
-		<nav className="VineFilter">
+		<nav className="WineFilter">
 			{Object.keys(filter).map((filterKey) => {
 				return <Checkbox
 					key={filterKey}
 					label={filterKey}
-					value={filter[filterKey as VineTypes]}
+					value={filter[filterKey as WineTypes]}
 					changes={handleFilterChanges}
 				/>;
 			})}

@@ -1,1 +1,1 @@
-export * from './VineProvider';
+export * from './WineProvider';

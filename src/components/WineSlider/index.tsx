@@ -1,22 +1,22 @@
 import React, { useRef, useState } from 'react';
 import Slider, { Settings } from 'react-slick';
 
-import { VineCard } from '../VineCard';
-import { VineSliderProps } from './VineSliderProps';
-import { VineSliderControls } from './VineSliderControls';
+import { WineCard } from '../WineCard';
+import { WineSliderProps } from './WineSliderProps';
+import { WineSliderControls } from './WineSliderControls';
 
-import './VineSlider.css';
+import './WineSlider.css';
 
 const MAX_SLIDES = 4;
 
-export function VineSlider(props: VineSliderProps) {
+export function WineSlider(props: WineSliderProps) {
 	const slider = useRef<Slider>(null);
 	const [isForwardDisabled, setForwardDisabled] = useState(false);
 	const [isBackDisabled, setBackDisabled] = useState(true);
 
-	const { vines } = props;
+	const { wines } = props;
 
-	const slidesToShow = vines.length <= MAX_SLIDES ? vines.length : MAX_SLIDES;
+	const slidesToShow = wines.length <= MAX_SLIDES ? wines.length : MAX_SLIDES;
 
 	const sliderSettings: Settings = {
 		dots: false,
@@ -29,19 +29,19 @@ export function VineSlider(props: VineSliderProps) {
 		slidesToScroll: 1,
 		beforeChange(currentSlide: number, nextSlide: number) {
 			setBackDisabled(nextSlide === 0);
-			setForwardDisabled(slidesToShow + nextSlide >= vines.length);
+			setForwardDisabled(slidesToShow + nextSlide >= wines.length);
 		}
 	};
 
-	const isSliderControlsVisible = vines.length > MAX_SLIDES;
+	const isSliderControlsVisible = wines.length > MAX_SLIDES;
 
 	return (
-		<section className="VineSlider">
+		<section className="WineSlider">
 			<Slider ref={slider} {...sliderSettings}>
-				{vines.map((vine) => <VineCard key={vine.id} vine={vine}/>)}
+				{wines.map((wine) => <WineCard key={wine.id} wine={wine}/>)}
 			</Slider>
 
-			<VineSliderControls slider={slider.current}
+			<WineSliderControls slider={slider.current}
 								visible={isSliderControlsVisible}
 								backDisabled={isBackDisabled}
 								forwardDisabled={isForwardDisabled}

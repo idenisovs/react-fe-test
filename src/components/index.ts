@@ -1,4 +1,4 @@
 export * from './Checkbox';
-export * from './VineFilter';
-export * from './VineSlider';
-export * from './VineCard';
+export * from './WineFilter';
+export * from './WineSlider';
+export * from './WineCard';

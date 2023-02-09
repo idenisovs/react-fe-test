@@ -1,3 +1,3 @@
-export * from './Vine';
-export * from './VineTypes';
-export * from './VineFilter';
+export * from './Wine';
+export * from './WineTypes';
+export * from './WineFilter';

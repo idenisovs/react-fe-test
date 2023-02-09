@@ -1,6 +1,6 @@
 import Slider from 'react-slick';
 
-export interface VineSliderControlsProps {
+export interface WineSliderControlsProps {
 	slider: Slider|null;
 	visible?: boolean;
 	back?: () => void;
